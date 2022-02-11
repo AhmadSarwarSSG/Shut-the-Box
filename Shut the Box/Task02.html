@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="Task02_Function.js"></script>
+    <link rel="stylesheet" href="Task02_Style.css">
+    <title>Shut the Box</title>
+</head>
+
+<body>
+    <div id="rules">
+        <h1>Shut the Box</h1>
+        <h2>The Rules</h2>
+        <ol type="i">
+            <li>Fach turn, you roll the dice (or die) and select 1 or more boxes which sum to value of your roll.</li>
+            <li>You will not be allowed to pick the boxes which you choose on subsequent turns.</li>
+            <li>When the sum of boxes which are left is less than or equal to 6, you'll only roll a single dice.</li>
+            <li>When you cannot make a move or you give up, the sum of the boxes which are left gives your score.</li>
+            <li>Lower scores are better and a score of 0 is called "Shutting the Box".</li>
+        </ol>
+    </div>
+    <div id="roll">
+        <h2>Dice Roll</h2>
+        <div id="dice-box">
+            <button onclick="rollDice()" id="rollBtn">Dice Roll</button>
+            <p id="result"></p>
+        </div>
+    </div>
+    <div id="shutter-box">
+        <h2>Box Selection</h2>
+        <form>
+            <div id="box">
+                <div class="shutters">
+                    <label for="box1">1</label>
+                    <br>
+                    <input type="checkbox" value="1" id="box1" class="shut">
+                </div>
+                <div class="shutters">
+                    <label for="box2">2</label>
+                    <br>
+                    <input type="checkbox" value="2" id="box2" class="shut">
+                </div>
+                <div class="shutters">
+                    <label for="box3">3</label>
+                    <br>
+                    <input type="checkbox" value="3" id="box3" class="shut">
+                </div>
+                <div class="shutters">
+                    <label for="box4">4</label>
+                    <br>
+                    <input type="checkbox" value="4" id="box4" class="shut">
+                </div>
+                <div class="shutters">
+                    <label for="box5">5</label>
+                    <br>
+                    <input type="checkbox" value="5" id="box5" class="shut">
+                </div>
+                <div class="shutters">
+                    <label for="box6">6</label>
+                    <br>
+                    <input type="checkbox" value="6" id="box6" class="shut">
+                </div>
+                <div class="shutters">
+                    <label for="box7">7</labelfor>
+                        <br>
+                        <input type="checkbox" value="7" id="box7" class="shut">
+                </div>
+                <div class="shutters">
+                    <label for="box8">8</label>
+                    <br>
+                    <input type="checkbox" value="8" id="box8" class="shut">
+                </div>
+                <div class="shutters">
+                    <label for="box9">9</label>
+                    <br>
+                    <input type="checkbox" value="9" id="box9" class="shut">
+                </div>
+            </div>
+        </form>
+        <div id="buttons">
+            <button id="submit" onclick="Check()">Submit Box Selection</button>
+            <button id="endGame" onclick="endGame()">I gave up I can't make the valid move</button>
+        </div>
+    </div>
+</body>
+
+</html>
